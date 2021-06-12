@@ -1,8 +1,7 @@
-// ./src/index.js
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+//to passing store as prop
 import { Provider } from 'react-redux';
 import shoppingListItemReducer from './reducers/shoppingListItemReducer';
 import App from './App';
@@ -14,6 +13,7 @@ const store = createStore(
 ); /* code change */
 
 ReactDOM.render(
+  //By including the Provider, we'll be able to access our Redux store and/or dispatch actions from any component we want, regardless of where it is on the component tree.
   <Provider store={store}>
     <App />
   </Provider>,
